@@ -1,9 +1,11 @@
-# Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models
+# Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models [CVPR'25]
 
 <div>
   <img src="docs/opening_figure_v5.png" style="width:100%">
 </div>
 <br>
+
+<a href="https://arxiv.org/abs/2502.20134"><img src="https://img.shields.io/badge/arXiv-2502.20134-b31b1b.svg" height=20.5></a>
 
 > **Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models**
 >
