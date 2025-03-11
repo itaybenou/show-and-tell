@@ -1,7 +1,7 @@
 # Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models [CVPR'25]
 
 <div>
-  <img src="docs/salf_cbm_gif.gif" style="width:100%"> 
+  <img src="docs/salf-cbm-gif.gif" style="width:100%"> 
 </div>
 <br>
 
