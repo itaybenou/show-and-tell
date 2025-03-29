@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta property="og:title" content="Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models"/>
+  <meta property="og:url" content="https://itaybenou.github.io/gh-pages-demo/"/>
+  <meta property="og:image" content="static/images/og_tag_header_image.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <title>Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="icon" href="static/figures/snail.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="publication-header">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- <div class="columns is-centered"> -->
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models</h1>
+        </div>
+    </div>
+  </div>   
+</section>
+
+<section class="publication-author-block">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+		      <div class="is-size-3 publication-authors">
+          </div>
+          
+          <div class="is-size-3 publication-authors">
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://itaybenou.github.io/" target="_blank">Itay Benou</a><sup>1</sup><span>&numsp;</span></span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=xt7uyAEAAAAJ&hl=iw&oi=ao" target="_blank">Tammy Riklin Raviv</a><sup>1</sup><span>&numsp;</span></span>
+          </div>
+
+          <div class="is-size-7 publication-authors">
+            <span class="author-block"><sup>1</sup>Ben-Gurion University</span><span>&numsp;</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+		<span class="author-block">CVPR 2025</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.20134" target="_blank"
+                  class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Colab Link. -->
+              <span class="link-block">
+                <a href="https://github.com/itaybenou/show-and-tell" target="_blank"
+                class="external-link button is-normal is-rounded">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+              </span>
+            </div>
+          </div>
+          <div class="is-size-6 publication-authors">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="container">
+      <div class="item">
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/salf-cbm-gif.gif" alt="SALF-CBM"/>
+        <b>Making any vision model explainable with <span class="small-caps">SALF-CBM</span>:</b> We transform any “black-box” backbone into an interpretable model by using semantic concepts and grounding them in the input image.
+        <br><p style="margin:8px;"></p>
+        <b>Explaining individual model decisions with <span class="small-caps">SALF-CBM</span>:</b> Given a pre-trained backbone model, we decompose its features into interpretable concept maps, each localizing a distinct concept within the input image. By training a sparse classifier on top of these maps, we obtain a spatially-aware bottleneck model whose predictions are both visually and conceptually interpretable.
+        <br><p style="margin:8px;"></p>
+	<b>Revealing what your model sees with <span class="small-caps">SALF-CBM</span>:</b> Given a specific region-of-interest in the image, <span class="small-caps">SALF-CBM </span> produces a set of the most likely concepts describing this region. This allows users to actively explore their model to reveal how it perceives different parts of the image and diagnose misclassification errors.
+    	<br><p style="margin:8px;"></p>
+        <b>Local user intervention with <span class="small-caps">SALF-CBM</span>:</b> At test-time, users can actively adjust the model’s final prediction by localy editing its concept maps (i.e., suggesting counterfactual explanations in specific image regions).
+	 </h2>
+	  </div>
+    </div>
+  </div>
+ <!--  </div> -->
+  </div>
+  </div>
+ <!--  </div> -->
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- div class="item">
+          <p style="margin-bottom: 30px">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/figures/video.mp4"
+          type="video/mp4">
+        </video>
+        </p>
+        </div -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Modern deep neural networks have now reached human-level performance across a variety of tasks. However, unlike humans they lack the ability to explain their decisions by showing where and telling what concepts guided them. In this work, we present a unified framework for transforming any vision neural network into a spatially and conceptually interpretable model. We introduce a spatially-aware concept bottleneck layer that projects “black-box” features of pre-trained backbone models into interpretable concept maps, without requiring human labels. By training a classification layer over this bottleneck, we obtain a self-explaining model that articulates which concepts most influenced its prediction, along with heatmaps that ground them in the input image. Accordingly, we name this method “Spatially-Aware and Label-Free Concept Bottleneck Model” (SALF-CBM). Our results show that the proposed SALF-CBM: (1) Outperforms non-spatial CBM methods, as well as the original backbone, on a variety of classification tasks; (2) Produces high-quality spatial explanations, outperforming widely used heatmap-based methods on a zero-shot segmentation task; (3) Facilitates model exploration and debugging, enabling users to query specific image regions and refine the model's decisions by locally editing its concept maps. 
+	  </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title has-text-centered">Video</h2>-->
+<!--      <center>-->
+<!--        <iframe width="630" height="354" src="https://www.youtube.com/embed/9EWs2IX4cus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--      </center>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+  <!--<section class="section hero is-light">-->
+  <section class="section hero">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does it work?</h2>
+        <div class="content has-text-justified">
+        </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/complete_overview.jpg" alt="salf-cbm overview" width="1000px"/>
+      </div>
+        <div class="content has-text-justified">
+          <p>
+         Given a pre-trained backbone model, we transform it into an explainable SALF-CBM as folllows:
+            (1) We automatically generate a list of task-relevant visual concepts using GPT.
+            (2) We compute a spatial concept similarity matrix that quantifies what concepts appear at different locations in each training image, using CLIP's visual prompting property.
+            (3) Using this patial concept similarity matrix, we train a spatially-aware Concept Bottleneck Layer (CBL) that projects the backbone’s “black-box” features into interpretable concept maps.
+		  We calculate the learned pseudo-token w<sup>*</sup><sub>N</sub> as a linear combination of the tokens in the vocabulary weighted by their learned coefficients.
+            (4) We pool the concept maps into global concept activations, and train a sparse linear layer over then such that the model’s final prediction is a linear combination of interpretable concepts.
+            (5) In inference time, individual model predictions are explained by the concepts with the highest importance score and their corresponding concept maps.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered">Concept Decomposition</span></h2>
+      <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+         <div class="column is-centered has-text-centered">
+        <img src="static/figures/decompositions/affection.jpg" alt="affection" width="850px"/>
+            <span><br><br> </span>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/decompositions/spring.jpg" alt="spring" width="850px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/decompositions/composer.jpg" alt="composer" width="850px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/decompositions/paris.jpg" alt="paris" width="850px"/>
+      </div>
+          <div class="column is-centered has-text-centered">
+        <img src="static/figures/decompositions/dog.jpg" alt="dog" width="850px"/>
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+</section> -->
+
+
+
+<!--   <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered">Single Image Decomposition</span></h2>
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <p>
+            Given a single image generated for the concept, <span class="small-caps">Conceptor </span> can decompose the image into its own set of corresponding tokens that cause the generation. We find that the model learns to rely on non-trivial, semantic connections between concepts. For example, a snake is decomposed to a hose and a gecko such that the shape of its body is borrowed from the hose, and its head and skin texture are borrowed from the gecko.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+         <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/snake.jpg" alt="snake" width="500px"/>
+      </div>
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/peppers.jpg" alt="Sweet peppers" width="500px"/>
+      </div>
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/oak.jpg" alt="oak" width="500px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/snail.jpg" alt="snail" width="500px"/>
+      </div>
+
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/wardrobe.jpg" alt="wardrobe" width="500px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/corn.jpg" alt="corn" width="500px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/dj.jpg" alt="dj" width="500px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/fear.jpg" alt="fear" width="500px"/>
+      </div>
+         <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/bee.jpg" alt="bee" width="500px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/single_image/castle.jpg" alt="castle" width="500px"/>
+        </div>
+          <div class="column is-centered has-text-centered">
+        <img src="static/figures/single_image/painter.jpg" alt="painter" width="500px"/>
+            <span><br><br> </span>
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+</section> -->
+
+<!--   <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h6 class="title has-text-centered">Double-Meaning Concepts</span></h6>
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <p>
+            We conduct experiments using concepts with a dual meaning (e.g., <i>a crane</i> is a type of bird and also a construction tool) and manipulate the token that controls one of the meanings. We observe that even when only one object is generated, the image relies on both meanings of the concept (e.g., the crane is shaped like a bird's head). These examples demonstrate that the model entangles both meanings of the concept semantically to create the resulting image.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/bi_literal/crane.jpg" alt="Crane" width="700px"/>
+      </div>
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/bi_literal/apple.jpg" alt="Big apple" width="700px"/>
+      </div>
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/bi_literal/bass.jpg" alt="bass" width="700px"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/bi_literal/date.jpg" alt="date" width="700px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/bi_literal/date2.jpg" alt="date" width="700px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/bi_literal/bass2.jpg" alt="bass" width="700px"/>
+      </div>
+  </div>
+</div>
+</div>
+</section> -->
+
+
+<!--   <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h6 class="title has-text-centered">Concept Manipulation</h6>
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <p>
+            Our method enables fine-grained concept manipulation by modifying the coefficient corresponding to a token of interest. For example, by manipulating the coefficient corresponding to the token <i>abstract</i> in the decomposition of the concept <i>sculpture</i>, we can make an input sculpture more or less abstract.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/manipulation/abstract.jpg" alt="sculpture" width="700px"/>
+      </div>
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/manipulation/playground.jpg" alt="park" width="700px"/>
+      </div>
+	  <div class="column is-centered has-text-centered">
+        <img src="static/figures/manipulation/nerdy.jpg" alt="professor" width="700px"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/manipulation/dolomites.jpg" alt="mountain" width="700px"/>
+      </div>
+         <div class="column is-centered has-text-centered">
+        <img src="static/figures/manipulation/trump.jpg" alt="president" width="700px"/>
+      </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/manipulation/christmas.jpg" alt="winter" width="700px"/>
+          <span><br><br></span>
+      </div>
+  </div>
+</div>
+</div>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; <p style="margin-top: 30px; margin-bottom: 30px"> &ndash;&gt;-->
+<!--      <h2 class="title has-text-centered">Using Cross-Attention as Explanation</h2>-->
+<!--      &lt;!&ndash; </p> &ndash;&gt;-->
+<!--      -->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="column is-centered has-text-centered">-->
+<!--        <img src="static/figures/expl_cat_frog.jpg" width="400" class="is-centered"/>-->
+<!--        </div>-->
+<!--        <div class="column is-centered has-text-centered">-->
+<!--        <img src="static/figures/expl_elephant_crown.jpg" width="400" class="is-centered"/>-->
+<!--        </div>-->
+<!--		<div class="column is-centered has-text-centered">-->
+<!--        <img src="static/figures/expl_turtle_bowl.jpg" width="400" class="is-centered"/>-->
+<!--        </div>-->
+<!--		<div class="column is-centered has-text-centered">-->
+<!--        <img src="static/figures/expl_backpack_glasses.jpg" width="400" class="is-centered"/>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</section>-->
+
+
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper poster &ndash;&gt;-->
+
+<!--      <h2 class="title has-text-centered">Uncurated Results</h2>-->
+<!--      <p style="margin-top: 30px; margin-bottom: 30px">-->
+<!--      &lt;!&ndash; <div class="column is-four-fifths"> &ndash;&gt;-->
+<!--          <div class="column is-centered has-text-centered">-->
+<!--        <img src="static/figures/uncurated.jpg" alt="cars peace" width="500px"/>-->
+<!--      </div>-->
+<!--       </p>-->
+<!--		<h2 class="subtitle is-centered has-text-centered">-->
+<!--          Uncurated results with the same 8 random seeds comparing Stable Diffusion and Attend-and-Excite.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </section> -->
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <p>If you find this project useful for your research, please cite the following:</p>
+
+      <pre><code>@article{benou2025show,
+  title={Show and Tell: Visually Explainable Deep Neural Nets via Spatially-Aware Concept Bottleneck Models},
+  author={Benou, Itay and Riklin-Raviv, Tammy},
+  journal={arXiv preprint arXiv:2502.20134},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+
+<footer class="footer">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>
+        Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+        href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+  <script type="text/javascript">
+    var sc_project=12351448; 
+    var sc_invisible=1; 
+    var sc_security="c676de4f"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/12351448/0/c676de4f/1/"
+    alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
