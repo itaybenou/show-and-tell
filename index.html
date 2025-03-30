@@ -178,7 +178,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Modern deep neural networks have now reached human-level performance across a variety of tasks. However, unlike humans they lack the ability to explain their decisions by showing where and telling what concepts guided them. In this work, we present a unified framework for transforming any vision neural network into a spatially and conceptually interpretable model. We introduce a spatially-aware concept bottleneck layer that projects “black-box” features of pre-trained backbone models into interpretable concept maps, without requiring human labels. By training a classification layer over this bottleneck, we obtain a self-explaining model that articulates which concepts most influenced its prediction, along with heatmaps that ground them in the input image. Accordingly, we name this method “Spatially-Aware and Label-Free Concept Bottleneck Model” (SALF-CBM). Our results show that the proposed SALF-CBM: (1) Outperforms non-spatial CBM methods, as well as the original backbone, on a variety of classification tasks; (2) Produces high-quality spatial explanations, outperforming widely used heatmap-based methods on a zero-shot segmentation task; (3) Facilitates model exploration and debugging, enabling users to query specific image regions and refine the model's decisions by locally editing its concept maps. 
+            Modern deep neural networks have now reached human-level performance across a variety of tasks. However, unlike humans they lack the ability to explain their decisions by showing where and telling what concepts guided them. In this work, we present a unified framework for transforming any vision neural network into a spatially and conceptually interpretable model. We introduce a spatially-aware concept bottleneck layer that projects “black-box” features of pre-trained backbone models into interpretable concept maps, without requiring human labels. By training a classification layer over this bottleneck, we obtain a self-explaining model that articulates which concepts most influenced its prediction, along with heatmaps that ground them in the input image. Accordingly, we name this method “Spatially-Aware and Label-Free Concept Bottleneck Model” (<b>SALF-CBM</b>). Our results show that the proposed <b>SALF-CBM</b>: (1) Outperforms non-spatial CBM methods, as well as the original backbone, on a variety of classification tasks; (2) Produces high-quality spatial explanations, outperforming widely used heatmap-based methods on a zero-shot segmentation task; (3) Facilitates model exploration and debugging, enabling users to query specific image regions and refine the model's decisions by locally editing its concept maps. 
 	  </p>
         </div>
       </div>
@@ -213,7 +213,7 @@
       </div>
 <!--         <div class="content has-text-justified">
           <p>
-         Given a pre-trained backbone model, we transform it into an explainable SALF-CBM as folllows:
+         Given a pre-trained backbone model, we transform it into an explainable <b>SALF-CBM</b> as folllows:
             (1) We automatically generate a list of task-relevant visual concepts using GPT.
             (2) We compute a spatial concept similarity matrix <i>P</i> that quantifies what concepts appear at different locations in each training image, using CLIP's visual prompting property.
             (3) We train a spatially-aware Concept Bottleneck Layer (CBL) to project the backbone’s “black-box” features into interpretable concept maps. <i>L</i><sub>CBL</sub> encourages the predicted concept maps to follow to spatial image-concept similarity matrix <i>P</i>.
@@ -223,7 +223,7 @@
         </div> -->
 	<div class="content has-text-justified">
 	  <p>
-	    Given a pre-trained backbone model, we transform it into an explainable <span class="special-font">SALF-CBM</span> as follows:
+	    Given a pre-trained backbone model, we transform it into an explainable <b>SALF-CBM</b> as follows:
 	  </p>
 	  <ol>
 	    <li>We automatically generate a list of task-relevant visual concepts using GPT.</li>
@@ -242,8 +242,19 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title has-text-centered">Explaining Model Predictions</span></h2>
+      <h2 class="title has-text-centered">Explaining model predictions</span></h2>
       <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+	<div class="content has-text-justified">
+          <p>
+            Given an image, <b>SALF-CBM</b> explains its prediction as an integral part of its inference process by showing the concepts that most contributed to its output and grounding them in the input image.
+            </p>
+        </div>
+	</div>
+      </div>
+    </div>
       <div id="results-carousel" class="carousel results-carousel">
          <div class="column is-centered has-text-centered">
         <img src="static/figures/explanations/epxlain_1.jpg" alt="ice" width="850px"/>
@@ -269,17 +280,19 @@
   <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title has-text-centered">Exploring Model Perception</span></h2>
+      <h2 class="title has-text-centered">Exploring model perception</span></h2>
+      <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-centered">
 	<div class="content has-text-justified">
           <p>
-            Given an image and a region within it (as an ROI mask), <span class="small-caps">SALF-CBM </span> can reveal how the model perceives this region by producing a list of the most likely concepts describing it.
+            Given an image and a region within it (as an ROI mask), <b>SALF-CBM</b> can reveal how the model perceives this region by producing a list of the most likely concepts describing it.
             </p>
         </div>
 	</div>
       </div>
+    </div>
     </div>
   </div>
       <div class="container is-max-desktop">
