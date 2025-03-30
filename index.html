@@ -104,6 +104,38 @@
 </section>
 
 <section class="hero is-small">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="container">
+          <div class="item">
+            <div class="column is-centered has-text-left">
+              <img src="static/figures/salf-cbm-gif.gif" alt="SALF-CBM"/>
+	      We present <b>SALF-CBM</b>: the first spatially-aware and label-free concept bottleneck model.
+              <p><b>Key Features</b></p>
+              <b>Making any vision model explainable:</b>
+              <b>SALF-CBM</b> transforms any “black-box” backbone into an interpretable model by leveraging semantic concepts and grounding them in the input image. Our method is model agnostic, and accomodates both CNN and ViT backbones.
+              <br><p style="margin:8px;"></p>
+
+              <b>Explaining individual model decisions:</b>
+              Given a pre-trained backbone, <b>SALF-CBM</b> decomposes its features into interpretable concept maps, each corresponding to a distinct concept in the image. By training a sparse classifier on top of these maps, we obtain a spatially-aware bottleneck model whose predictions are both visually and conceptually interpretable, without compromising performance of the original model.
+              <br><p style="margin:8px;"></p>
+
+              <b>Revealing what your model sees:</b>
+              Given any region-of-interest in the image, <b>SALF-CBM</b> can identify the most likely concepts describing this region. This allows users to explore their model’s internal reasoning, understand how it perceives different image parts, and diagnose misclassification errors.
+              <br><p style="margin:8px;"></p>
+
+              <b>Local user intervention:</b>
+              At test time, users can adjust the model’s final prediction by directly editing its concept maps — suggesting counterfactual explanations in specific regions of the image.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- <section class="hero is-small">
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -122,11 +154,9 @@
 	  </div>
     </div>
   </div>
- <!--  </div> -->
   </div>
   </div>
- <!--  </div> -->
-</section>
+</section> -->
 
 <section class="section hero is-light">
   <div class="container is-max-desktop">
