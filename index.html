@@ -200,7 +200,7 @@
 
   <!--<section class="section hero is-light">-->
   <section class="section hero">
-  <div class="container is-max-desktop">
+  <div class="container">
     <!-- Abstract. -->
 <!--     <h2 class="title is-3">How does it work?</h2> -->
     <div class="columns is-centered has-text-centered">
@@ -221,6 +221,7 @@
             (5) In inference time, individual model predictions are explained by the concepts with the highest importance score and their corresponding concept maps.
           </p>
         </div> -->
+	<div class="container is-max-desktop">
 	<div class="content has-text-justified">
 	  <p>
 	    Given a pre-trained backbone model, we transform it into an explainable <b>SALF-CBM</b> as follows:
@@ -232,6 +233,7 @@
 	    <li>We pool the concept maps into global concept activations and train a sparse linear layer over them such that the model’s final prediction is a linear combination of interpretable concepts.</li>
 	    <li>At inference time, individual model predictions are explained by the concepts with the highest importance scores and their corresponding concept maps.</li>
 	  </ol>
+	</div>
 	</div>
       </div>
     </div>
