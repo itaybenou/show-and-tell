@@ -200,7 +200,7 @@
 
   <!--<section class="section hero is-light">-->
   <section class="section hero">
-  <div class="container">
+  <div class="container is-max-desktop">
     <!-- Abstract. -->
 <!--     <h2 class="title is-3">How does it work?</h2> -->
     <div class="columns is-centered has-text-centered">
@@ -221,7 +221,6 @@
             (5) In inference time, individual model predictions are explained by the concepts with the highest importance score and their corresponding concept maps.
           </p>
         </div> -->
-	<div class="container is-max-desktop">
 	<div class="content has-text-justified">
 	  <p>
 	    Given a pre-trained backbone model, we transform it into an explainable <b>SALF-CBM</b> as follows:
@@ -234,11 +233,41 @@
 	    <li>At inference time, individual model predictions are explained by the concepts with the highest importance scores and their corresponding concept maps.</li>
 	  </ol>
 	</div>
-	</div>
       </div>
     </div>
     <!--/ Abstract. -->
   </div>
+</section>
+
+<section class="section hero">
+  <!-- Container for the text content -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does it work?</h2>
+        
+        <div class="content has-text-justified">
+          <p>
+            Given a pre-trained backbone model, we transform it into an explainable <b>SALF-CBM</b> as follows:
+          </p>
+          <ol>
+            <li>We automatically generate a list of task-relevant visual concepts using GPT.</li>
+            <li>We compute a spatial concept similarity matrix <i>P</i> that quantifies what concepts appear at different locations in each training image, using CLIP's visual prompting property.</li>
+            <li>We train a spatially-aware Concept Bottleneck Layer (CBL) to project the backbone’s “black-box” features into interpretable concept maps. <i>L</i><sub>CBL</sub> encourages the predicted concept maps to follow the spatial image-concept similarity matrix <i>P</i>.</li>
+            <li>We pool the concept maps into global concept activations and train a sparse linear layer over them such that the model’s final prediction is a linear combination of interpretable concepts.</li>
+            <li>At inference time, individual model predictions are explained by the concepts with the highest importance scores and their corresponding concept maps.</li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Separate container for the full-width image -->
+  <div class="has-text-centered">
+    <img src="static/figures/complete_overview_v3.jpg" alt="salf-cbm overview" style="width: 100%; max-width: 1000px; margin-top: 2rem;"/>
+  </div>
+
 </section>
 
 <section class="hero is-small">
