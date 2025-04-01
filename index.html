@@ -239,7 +239,7 @@
 	    <li>Prior to training, we compute a spatial concept similarity matrix <i>P</i>, which quantifies the presence of visual concepts at different locations within each training image. This is achieved by leveraging CLIP's visual prompting property, wherein the image encoder is guided to focus on specific image regions by highlighting them with visual markers, such as a red circle.
 	    <li>We train a spatially-aware Concept Bottleneck Layer (CBL) to project the backbone's “black-box” features into interpretable concept maps. This is done using a loss function <i>L</i><sub>CBL</sub>, which encourages the predicted concept maps to align with the spatial image-concept similarity matrix <i>P</i>.
             <li>We pool the concept maps into global concept activations, and train a sparse linear layer over them such that the model’s final prediction is provided as a linear combination of interpretable concepts.</li>
-            <li>At inference time, individual model predictions are explained by the concepts with the highest importance scores and their corresponding concept maps.</li>
+            <li>At inference time, explainability is provided as an integral part of model's forward-pass, without requiring additional computations. Individual model decisions are globally explained by the concepts with the highest contributions scores, as well as locally via their corresponding concept maps.</li>
           </ol>
         </div>
 
