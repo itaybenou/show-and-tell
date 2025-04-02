@@ -263,7 +263,7 @@
         <div class="content has-text-centered">
 	<div class="content has-text-justified">
           <p>
-            Given an image, <b>SALF-CBM</b> explains its prediction as an integral part of its inference process by showing the concepts that most contributed to its output and grounding them in the input image.
+            Given an image, <b>SALF-CBM</b> explains its prediction as an integral part of its inference process by showing the concepts that most contributed to its output and grounding them in the input image. Results below are with ResNet-50 backbone pre-trained on ImageNet.
             </p>
         </div>
 	</div>
@@ -301,7 +301,7 @@
         <div class="content has-text-centered">
 	<div class="content has-text-justified">
           <p>
-            Given an image and a region within it (as an ROI mask), <b>SALF-CBM</b> can reveal how the model perceives this region by producing a list of the most likely concepts describing it.
+            Given an image and a region within it (as an ROI mask), <b>SALF-CBM</b> can reveal how the model perceives this region by producing a list of the most likely concepts describing it. Results below are with ResNet-50 backbone pre-trained on ImageNet.
             </p>
         </div>
 	</div>
@@ -328,6 +328,65 @@
   </div>
 </div>
 </div>
+</section>
+
+
+<section class="section hero">
+  <!-- Container for the text content -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Concept grounding in videos</h2>
+        
+        <div class="content has-text-justified">
+          <p>
+            We show qualitative results of <b>SALF-CBM</b>'s concept maps when running on DVAIS 2017 video sequences (frame-by-frame). Backbone is ResNet-50 pre-trained on ImageNet.
+          </p>
+          
+          <!-- START GIFs -->
+          <div class="container" style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <!-- First Pair -->
+            <div class="pair" style="margin: 0 20px; display: flex;">
+              <div class="gif-container" style="margin: 0 2px; text-align: center;">
+                <div class="description" style="margin-bottom: 5px; font-weight: bold;">First GIF</div>
+                <img src="path-to-your-first-gif.gif" alt="GIF 1">
+              </div>
+              <div class="gif-container" style="margin: 0 2px; text-align: center;">
+                <div class="description" style="margin-bottom: 5px; font-weight: bold;">Second GIF</div>
+                <img src="path-to-your-second-gif.gif" alt="GIF 2">
+              </div>
+            </div>
+            
+            <!-- Second Pair -->
+            <div class="pair" style="margin: 0 20px; display: flex;">
+              <div class="gif-container" style="margin: 0 2px; text-align: center;">
+                <div class="description" style="margin-bottom: 5px; font-weight: bold;">Third GIF</div>
+                <img src="path-to-your-third-gif.gif" alt="GIF 3">
+              </div>
+              <div class="gif-container" style="margin: 0 2px; text-align: center;">
+                <div class="description" style="margin-bottom: 5px; font-weight: bold;">Fourth GIF</div>
+                <img src="path-to-your-fourth-gif.gif" alt="GIF 4">
+              </div>
+            </div>
+            
+            <!-- Third Pair -->
+            <div class="pair" style="margin: 0 20px; display: flex;">
+              <div class="gif-container" style="margin: 0 2px; text-align: center;">
+                <div class="description" style="margin-bottom: 5px; font-weight: bold;">Fifth GIF</div>
+                <img src="path-to-your-fifth-gif.gif" alt="GIF 5">
+              </div>
+              <div class="gif-container" style="margin: 0 2px; text-align: center;">
+                <div class="description" style="margin-bottom: 5px; font-weight: bold;">Sixth GIF</div>
+                <img src="path-to-your-sixth-gif.gif" alt="GIF 6">
+              </div>
+            </div>
+          </div>
+          <!-- END GIFs -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!--   <section class="hero is-small">
