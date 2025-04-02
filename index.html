@@ -120,7 +120,7 @@
 	              <b>SALF-CBM</b> transforms any “black-box” backbone into a visually interpretable model by explaining its predictions using visual concepts and grounding them in the input image. <b>SALF-CBM</b> is model agnostic, supporting both CNN and ViT backbones.
 	              <br><p style="margin:8px;"></p>
 	
-	              <b>Interpreting Individual Model Decisions:</b>
+	              <b>Explaining Model Predictions:</b>
 	              Given a pre-trained backbone, <b>SALF-CBM</b> decomposes its learned features into interpretable concept maps, each highlighting a distinct visual concept in the image. By training a sparse classifier on top of these maps, we create a spatially-aware bottleneck model whose predictions are both visually and conceptually interpretable, without compromising performance of the original model.
 	              <br><p style="margin:8px;"></p>
 	
@@ -263,7 +263,7 @@
         <div class="content has-text-centered">
 	<div class="content has-text-justified">
           <p>
-            Given an image, <b>SALF-CBM</b> explains its prediction as an integral part of its inference process by showing the concepts that most contributed to its output and grounding them in the input image. Results below are with ResNet-50 backbone pre-trained on ImageNet.
+            <b>SALF-CBM</b> explains its predictions as an integral part of its inference process by specifying which concepts contributed to its output the most, and grounding them in the input image. Below, wen show qualitative examples for ResNet-50 backbone pre-trained on ImageNet.
             </p>
         </div>
 	</div>
@@ -301,7 +301,7 @@
         <div class="content has-text-centered">
 	<div class="content has-text-justified">
           <p>
-            Given an image and a region within it (as an ROI mask), <b>SALF-CBM</b> can reveal how the model perceives this region by producing a list of the most likely concepts describing it. Results below are with ResNet-50 backbone pre-trained on ImageNet.
+            When prompted with a specific image region, <b>SALF-CBM</b> reveals how the model perceives it by identifying the most strongly activated concepts within that region. Below, we show qualitative examples for ResNet-50 backbone pre-trained on ImageNet.
             </p>
         </div>
 	</div>
@@ -340,7 +340,7 @@
         
         <div class="content has-text-justified">
           <p>
-            We show qualitative results of <b>SALF-CBM</b>'s concept maps when running on DVAIS 2017 video sequences (frame-by-frame). Backbone is ResNet-50 pre-trained on ImageNet.
+            By applying our method to video sequences in a frame-by-frame manner, we can visualize how the model recognizes concepts over time. Below, we show qualitative results on DVAIS 2017 video sequences for ResNet-50 backbone pre-trained on ImageNet.
           </p>
         </div>
       </div>
