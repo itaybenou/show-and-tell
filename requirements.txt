@@ -1,0 +1,15 @@
+torch
+numpy < 2
+matplotlib >= 3.5.1
+torchvision >= 0.13
+gdown >= 4.7.1
+ftfy >= 6.1.1
+regex >= 2022.10.31
+tqdm >= 4.64.1
+scipy >= 1.13.0
+scikit-image >= 0.22.0
+opencv-python >= 4.9.0
+transformers == 4.24.0
+ipympl
+jupyter
+notebook
